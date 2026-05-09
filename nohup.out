@@ -1,0 +1,236 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.93.236:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 863-989-262
+127.0.0.1 - - [29/Mar/2026 18:31:29] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:31:29] "GET /static/style.css HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:31:30] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [29/Mar/2026 18:31:40] "[35m[1mGET /users HTTP/1.0[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/pymysql/connections.py", line 661, in connect
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.12/socket.py", line 837, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/app.py", line 139, in users
+    db = Database()
+         ^^^^^^^^^^
+  File "/home/ubuntu/fixflow/app.py", line 10, in __init__
+    self.con = pymysql.connect(
+               ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/pymysql/connections.py", line 365, in __init__
+    self.connect()
+  File "/home/ubuntu/fixflow/venv/lib/python3.12/site-packages/pymysql/connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '52.90.36.247' (timed out)")
+127.0.0.1 - - [29/Mar/2026 18:31:41] "GET /users?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:31:41] "GET /users?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:31:41] "GET /users?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/fixflow/credentials.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 863-989-262
+127.0.0.1 - - [29/Mar/2026 18:32:48] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:48] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:49] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:49] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:50] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:50] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:52] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:52] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:52] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:52] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:53] "GET /users/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:53] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:54] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:54] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:55] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:55] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:58] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:58] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:32:59] "GET /tickets/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:32:59] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:33:00] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:33:00] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:50:38] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:50:38] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:50:41] "[32mPOST /users/24/delete HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:50:41] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:50:41] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:50:44] "GET /users/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:50:44] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:50:52] "[32mPOST /users/create HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:50:52] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:50:52] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:02] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:02] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:12] "[32mPOST /tickets/4/delete HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:51:12] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:12] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:14] "GET /tickets/5/edit HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:14] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:17] "[32mPOST /tickets/5/edit HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:51:17] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:17] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:22] "GET /tickets/1 HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:22] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:31] "[32mPOST /tickets/1/comment/add HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:51:31] "GET /tickets/1 HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:31] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:35] "GET /tickets/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:35] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:45] "[32mPOST /tickets/create HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:51:45] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:45] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:48] "GET /tickets/8/edit HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:48] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:50] "[32mPOST /tickets/8/edit HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:51:50] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:50] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:51:53] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:51:53] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:17] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:17] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:30] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:30] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:34] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:34] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:38] "GET /tickets/3/edit HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:38] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:40] "[32mPOST /tickets/3/edit HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:57:40] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:40] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:43] "GET /tickets/3/edit HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:43] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:44] "[32mPOST /tickets/3/edit HTTP/1.0[0m" 302 -
+127.0.0.1 - - [29/Mar/2026 18:57:44] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:45] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:57] "GET /users/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:57] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:57:58] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:57:58] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:58:00] "GET /users/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:58:00] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [29/Mar/2026 18:58:17] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 18:58:17] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+198.235.24.132 - - [29/Mar/2026 19:20:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Mar/2026 19:37:50] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 20:27:13] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 20:34:08] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 20:40:43] "GET /users/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 20:44:20] "[33mGET /sendgrid.env HTTP/1.0[0m" 404 -
+127.0.0.1 - - [29/Mar/2026 20:48:34] "[33mGET /druid/index.html HTTP/1.0[0m" 404 -
+127.0.0.1 - - [29/Mar/2026 20:50:39] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:00:51] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:00:56] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [29/Mar/2026 21:01:03] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:03:12] "[33mGET /wiki HTTP/1.0[0m" 404 -
+127.0.0.1 - - [29/Mar/2026 21:04:50] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:10:23] "GET /tickets/create HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:19:33] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:20:16] "GET /tickets/5/edit HTTP/1.0" 200 -
+127.0.0.1 - - [29/Mar/2026 21:31:01] "GET /tickets/3/edit HTTP/1.0" 200 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.93.236:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 246-328-729
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.93.236:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 246-328-729
+127.0.0.1 - - [06/Apr/2026 21:44:15] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:15] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:15] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+127.0.0.1 - - [06/Apr/2026 21:44:17] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:17] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:25] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:25] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:26] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:26] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:27] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:27] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:27] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:27] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:28] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:28] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:30] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:30] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:44:33] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:33] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
+127.0.0.1 - - [06/Apr/2026 21:44:49] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:44:49] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:26] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:26] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:27] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:27] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:28] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:28] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:32] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:32] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:35] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:35] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:41] "GET /users HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:41] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:43] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:43] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:48:58] "GET /tickets/1/edit HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:48:58] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:49:00] "[32mPOST /tickets/1/edit HTTP/1.0[0m" 302 -
+127.0.0.1 - - [06/Apr/2026 21:49:00] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:49:00] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:51:28] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:51:34] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:51:34] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:51:35] "GET /tickets HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:51:35] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:51:36] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:51:36] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
+127.0.0.1 - - [06/Apr/2026 21:51:37] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [06/Apr/2026 21:51:37] "[36mGET /static/style.css HTTP/1.0[0m" 304 -
